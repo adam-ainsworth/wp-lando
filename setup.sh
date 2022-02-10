@@ -1,9 +1,9 @@
 #! /bin/bash
 if [ -z "$1" ]
 then
-	echo "No name given"
+    echo "No name given"
 else 
-	sed -i "" "s/EXAMPLE/$1/g" .env
-	sed -i "" "s/EXAMPLE/$1/g" .lando.yml
-    rm setup.sh
+    sed -i "" "s/EXAMPLE/$1/g" .env
+    sed -i "" "s/EXAMPLE/$1/g" .lando.yml
+    rm -rf .git setup.sh
 fi
