@@ -1,0 +1,13 @@
+name: EXAMPLE
+recipe: wordpress
+proxy:                
+  appserver_nginx:
+    - EXAMPLE.local
+config:
+  php: '8.0'
+  via: nginx
+  webroot: public_html
+  database: mariadb
+  xdebug: true
+  portforward: true
+
