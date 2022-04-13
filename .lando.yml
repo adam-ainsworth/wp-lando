@@ -7,7 +7,8 @@ config:
   php: '8.0'
   via: nginx
   webroot: public_html
-  database: mariadb
-  xdebug: true
-  portforward: true
-
+  xdebug: false
+services:
+  database:
+    type: mariadb
+    portforward: 3306
