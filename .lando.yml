@@ -1,14 +1,17 @@
 name: EXAMPLE
 recipe: wordpress
 proxy:                
-  appserver_nginx:
+  appserver:
     - EXAMPLE.local
 config:
-  php: '8.0'
-  via: nginx
+  php: '8.1'
+  via: apache
   webroot: public_html
   xdebug: false
 services:
   database:
     type: mariadb
     portforward: 3306
+keys:
+  - id_rsa
+
